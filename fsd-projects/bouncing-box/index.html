@@ -84,7 +84,10 @@
         moveBoxTo(postitionX);
         if(postitionX > boardWidth)
           speed = speed * -1
+        if(postitionX < 0)
+          speed *=-1
         }
+
 
         /**
          * This Function will be called each time the box is clicked.
@@ -97,7 +100,7 @@
         postitionX = 0;
         changeBoxText(points);
         points = points + 1 
-        speed = speed + 3
+        speed = 3 * points + 10;
         }
 
 
